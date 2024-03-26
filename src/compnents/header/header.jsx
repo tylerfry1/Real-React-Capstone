@@ -2,6 +2,19 @@ import React,{useState,useEffect} from 'react';
 import './header.css';
 
 const header = () => {
+  // Header Scroll Background Change
+  const[hasScrolled,setHasScrolled] = useState(false);
+
+  useEffect(()=> {
+    const handleScroll =() => {
+      setHasScrolled(window.scrollY > 0);
+    }
+    window.addEventListener("scroll",handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  })
+
 
   // Menu Open Close //
   const[isMenuOpen, setisMenuOpen] = useState(false);
@@ -10,7 +23,7 @@ const header = () => {
     setisMenuOpen(!isMenuOpen);
   }
   return <div>
-    <div className="header">
+    <div className={`header${hasScrolled ? "shadow" :"" }`}>
       <div className="nav container">
         {/* Logo */}
         <a href="#" className="logo">

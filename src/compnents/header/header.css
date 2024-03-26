@@ -5,6 +5,11 @@
     width: 100%;
     z-index: 100;
 }
+.header.shadow{
+    background: var(--white);
+    box-shadow: 1px 4px 14px rgb(15 54 55 /10%);
+    transition:0.3s ;
+}
 .nav{
     display: flex;
     justify-content: space-between;
