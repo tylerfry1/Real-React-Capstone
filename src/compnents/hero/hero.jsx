@@ -61,7 +61,7 @@ const hero = () => {
                 </div>
                 {/*Hero Images*/}
                 <div className="hero-images">
-                    <img src="./Home.png" alt="" />
+                    <img src="./Home.png" className="main-img"   alt="" />
                     <img src="./background.png" alt="" className="hero-bg-img" />
                     <img src="./Tag.png" alt="" className="tag-img" />
                 
