@@ -53,3 +53,15 @@ a{
   -webkit-background-clip: text;
   color: transparent;
 }
+/* Responsive */
+@media (max-width:1070px){
+  .container{
+    margin: 0 auto;
+    width: 92%;
+  }
+}
+@media(max-width: 884px){
+  section{
+    padding: 2rem 0;
+  }
+}
